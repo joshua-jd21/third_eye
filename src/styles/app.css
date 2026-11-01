@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter-tight/index.css";
+@import "@fontsource-variable/inter/index.css";
+
+/*
+  Still & Motion — design tokens
+  Palette is fixed: #000, #FFF, #F7F7F5 (paper), #E5E5E5 (rule), #777 (muted), #222 (graphite).
+  Type: Inter Tight (display) + Inter (text), both self-hosted through @fontsource.
+*/
+@theme {
+  --color-ink: #000000;
+  --color-paper: #f7f7f5;
+  --color-rule: #e5e5e5;
+  --color-muted: #777777;
+  --color-graphite: #222222;
+  --color-field: #ececea;
+
+  --font-display: "Inter Tight Variable", ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, "Helvetica Neue", Arial, sans-serif;
+
+  --text-display: clamp(2.5rem, 7.4vw, 6rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.035em;
+
+  --text-h1: clamp(2rem, 4.8vw, 3.5rem);
+  --text-h1--line-height: 1.02;
+  --text-h1--letter-spacing: -0.025em;
+
+  --text-h2: clamp(1.5rem, 2.6vw, 2.125rem);
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.015em;
+
+  --text-h3: clamp(1.125rem, 1.6vw, 1.375rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.01em;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.62;
+
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.6;
+
+  --text-meta: 0.6875rem;
+  --text-meta--line-height: 1.35;
+  --text-meta--letter-spacing: 0.12em;
+}
+
+@layer base {
+  :root {
+    --gutter: 1.5rem;
+    --shell: 90rem;
+  }
+
+  @media (min-width: 48rem) {
+    :root {
+      --gutter: 2.5rem;
+    }
+  }
+
+  @media (min-width: 75rem) {
+    :root {
+      --gutter: 3.5rem;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-graphite);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  img {
+    display: block;
+  }
+
+  a {
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 1px;
+  }
+
+  ::selection {
+    background-color: #000;
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: #fff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Page gutter + max width. Every section is wrapped in one of these. */
+  .shell {
+    width: 100%;
+    max-width: var(--shell);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* 12-column editorial grid. Place items with col-span-* / col-start-* utilities. */
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 0;
+  }
+
+  @media (min-width: 64rem) {
+    .grid-12 {
+      column-gap: 2rem;
+    }
+  }
+
+  /* Uppercase meta / credits / nav label. */
+  .meta {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .skip-link {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    z-index: 100;
+    transform: translateY(-250%);
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+}

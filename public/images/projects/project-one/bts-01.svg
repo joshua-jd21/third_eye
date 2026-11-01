@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Project One — On Set 01 placeholder">
+  <rect width="1600" height="1200" fill="#E9E9E7"/>
+  <rect x="0.5" y="0.5" width="1599" height="1199" fill="none" stroke="#D6D6D2" stroke-width="1"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#8A8A86">
+    <text x="800" y="611.3333333333334" font-size="34" letter-spacing="4" font-weight="500">PROJECT ONE — ON SET 01</text>
+    <text x="800" y="662.3333333333334" font-size="23" letter-spacing="2">1600 × 1200 · 4:3</text>
+  </g>
+</svg>

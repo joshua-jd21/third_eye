@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Project Six — Thumbnail placeholder">
+  <rect width="1200" height="1500" fill="#E9E9E7"/>
+  <rect x="0.5" y="0.5" width="1199" height="1499" fill="none" stroke="#D6D6D2" stroke-width="1"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#8A8A86">
+    <text x="600" y="761.3333333333334" font-size="34" letter-spacing="4" font-weight="500">PROJECT SIX — THUMBNAIL</text>
+    <text x="600" y="812.3333333333334" font-size="23" letter-spacing="2">1200 × 1500 · 4:5</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350" role="img" aria-label="Project Three — Poster placeholder">
+  <rect width="2400" height="1350" fill="#E9E9E7"/>
+  <rect x="0.5" y="0.5" width="2399" height="1349" fill="none" stroke="#D6D6D2" stroke-width="1"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#8A8A86">
+    <text x="1200" y="687.6666666666666" font-size="38" letter-spacing="5" font-weight="500">PROJECT THREE — POSTER</text>
+    <text x="1200" y="744.6666666666666" font-size="26" letter-spacing="3">2400 × 1350 · 16:9</text>
+  </g>
+</svg>
