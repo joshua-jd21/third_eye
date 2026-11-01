@@ -13,7 +13,7 @@ import type { Credit, ImageAsset, SocialLink } from "./types";
  * The site's public origin. Used for canonical URLs, Open Graph tags and the
  * sitemap. REPLACE with the artist's own domain once it is connected.
  */
-export const siteUrl = "https://a66ff6b1455b7b3aaae7c45ccc9d1f57.ctonew.app";
+export const siteUrl = "https://a66ff6b1455b7b3aaae7c45ccc9d1f57.cto.site";
 
 export const artist = {
   /** PLACEHOLDER NAME — replace. Rendered uppercase in the header and footer. */
